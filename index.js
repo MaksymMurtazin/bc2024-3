@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { Command } = require('commander');
 const path = require('path');
-//Створив екземпляр Command для обробки аргументів.
+
 const program = new Command();
 program
   .option('-i, --input <path>', 'path to input file (JSON data)')
@@ -16,7 +16,7 @@ if (!options.input)
 console.error('Please, specify input file');
 process.exit(1);
 }
-// Отримання шляху до файлу
+
 const inputFilePath = path.resolve(options.input);
 let data;
 try 
